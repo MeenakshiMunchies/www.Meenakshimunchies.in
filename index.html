@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meenakshi's Munchies - The Taste of Royalty</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Georgia', serif; /* Luxurious font */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles  #2c1f4b*/
+        header {
+            background-color: #7c3c14;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 120px; /* Adjust logo size */
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background: linear-gradient(135deg, #6c4fbb, #ffcc00);
+            color: #fff;
+            padding: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #ffcc00;
+            color: #2c1f4b;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #4e3c7e;
+            color: #fff;
+        }
+
+        /* Product Section */
+        .products {
+            padding: 80px;
+            background-color: #fff;
+            text-align: center;
+            border-top: 2px solid #ffcc00;
+        }
+
+        .products h2 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #4e3c7e;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 23%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            font-size: 1.5rem;
+            color: #4e3c7e;
+            margin-top: 20px;
+        }
+
+        .product p {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* About Us Section */
+        .about {
+            padding: 80px;
+            background-color: #2c1f4b;
+            color: #fff;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #ffcc00;
+        }
+        .about h4 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #ffcc00;
+            font-style: italic;
+        }
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #e4e4e4;
+        }
+
+        .about ul {
+            text-align: left;
+            margin: 30px auto;
+            padding: 20px;
+            list-style-type: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            max-width: 700px;
+            color: #e4e4e4;
+        }
+
+        .about ul li {
+            margin-bottom: 20px;
+        }
+
+        .about .motto {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-top: 40px;
+            color: #ffcc00;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ffcc00;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #f4f4f4;
+        }
+
+        .contact button {
+            background-color: #ffcc00;
+            color: #2c1f4b;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: #4e3c7e;
+            color: #fff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c1f4b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .social-media a {
+            margin: 0 15px;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="https://content.instructables.com/F2C/06QK/M8RD6B1H/F2C06QKM8RD6B1H.png?auto=webp&crop=1%3A1&frame=1&width=150" alt="Meenakshi's Munchies Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to Meenakshi's Munchies</h1>
+        <p>Experience the true essence of luxury with our handcrafted, premium snacks.</p>
+        <a href="#products" class="btn">Indulge in Our Delights</a>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Premium Snacks</h2>
+        
+        <!-- Namkeen Section -->
+        <h1><u>Namkeen nibbles</u></h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://i.ytimg.com/vi/ZlqrDJa26hs/maxresdefault.jpg" alt="Roasted Mixture">
+                <h3>Roasted Mixture</h3>
+                <h4>look no further</h4>
+                <p>A delightful, crunchy blend of premium ingredients for the perfect snack.</p>
+                <h4>250gm/₹150</h4>
+                <h4>500gm/₹280</h4>
+            </div>
+            <div class="product">
+                <img src="https://pipingpotcurry.com/wp-content/uploads/2023/04/Cook-with-Manali-Methi-Mathri-600x600.jpg" alt="Methi Matri">
+                <h3>Methi Mathri</h3>
+                <h4>khasta nashta</h4>
+                <p>Herb-infused, crispy perfection that will elevate your snacking experience.</p>
+                <h4>250gm/₹200</h4>
+                <h4>500gm/₹380</h4>
+            </div>
+            <div class="product">
+                <img src="https://i.ytimg.com/vi/8O16fEqhzB4/maxresdefault.jpg" alt="Namk Pare">
+                <h3>Namak Pare</h3>
+                <h4>khayein saare</h4>
+                <p>Crispy, savory, and an irresistible treat with every bite.</p>
+                <h4>250gm/₹200</h4>
+                <h4>500gm/₹380</h4>
+            </div>
+              <div class="product">
+                <img src="https://content.instructables.com/FA4/4HKN/M8RD6TSF/FA44HKNM8RD6TSF.png??width=80&height=80&fit=bounds&auto=webp" alt="Chote Nawab">
+                <h3>Chote nawab</h3>
+                <h4>dikhaye ruab</h4>
+                <p>A royal blend of spices and crunch, fit for royalty.</p>
+                <h4>250gm/₹215</h4>
+            </div>
+                <div class="product">
+                <img src="https://content.instructables.com/F9S/I3EE/M8YIDJCF/F9SI3EEM8YIDJCF.jpg?auto=webp&crop=1%3A1&frame=1&width=150" alt="Chote Nawab">
+                <h3>Ragi strips</h3>
+                <h4>guilt-free trips</h4>
+                <p>Crispy, healthy, gluten-free ragi strips.</p>
+                <h4>250gm/₹215</h4>
+                <h4>250gm/₹500</h4>
+            </div>
+              <div class="product">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.inbPZ9VXZEQP5jPuRrINjQHaFj&pid=Api&P=0&h=180" alt="Chote Nawab">
+                <h3>Trikona nimki</h3>
+                <h4>perfect host-chai ka dost</h4>
+                <p>very tasty triangular nimki healthy and tasty</p>
+                <h4>250gm/₹200</h4>
+            </div>
+        </div>
+
+        <!-- Meeta Magic Section -->
+        <h1><u>Meeta Magic</u></h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/thekua-recipe18-736x552.jpg" alt="Thekua">
+                <h3>Thekua</h3>
+                <h4>Kuch meeta hojaye</h4>
+                <p>A crunchy, wholesome snack perfect for mid-day cravings.</p>
+                <h4>250gm/₹250</h4>
+                <h4>500gm/₹480</h4>
+            </div>
+            <div class="product">
+                <img src="https://cdn.virily.com/wp-content/uploads/2017/09/32_81012201557220-608x454.jpg" alt="Shakkar Pare">
+                <h3>Shakkar Pare</h3>
+                <h4>kitne nayare kitne pyara</h4>
+                <p>A sweet, crunchy indulgence that is perfect for any occasion.</p>
+                <h4>250gm/₹220</h4>
+                <h4>500gm/₹430</h4>
+            </div>
+            <div class="product">
+                <img src="https://images.slurrp.com/prodarticles/c42bl7tk7os.webp?impolicy=slurrp-20210601&width=1200&height=900&q=75" alt="Gud Pare">
+                <h3>Gud Pare</h3>
+                <h4>hamaare.....tumhare</h4>
+                <p>A delicious and healthy sweet treat made with jaggery.</p>
+                <h4>250gm/₹220</h4>
+                <h4>500gm/₹430</h4>
+            </div>
+                <div class="product">
+                <img src="https://www.pillsbury.in/wp-content/uploads/2021/09/Gujiya.jpg" alt="Gud Pare">
+                <h3>maava gujjiya</h3>
+                <h4>layae kushiya</h4>
+                <p>An Indian flavourful delicacy sweet.classicfestive treats that brings joy to family</p>
+                <h4>250gm/₹200</h4>
+                <h4>with honey drizle</h4>
+                <h4>250gm/₹225</h4>
+            </div>
+        </div>
+        <h1><u>LADDUS</u></h1>
+        <h3><u>sehat ka safar</u></h3>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.nEQ8kIq7IdNU_OiaDhp9fwHaE8&pid=Api&P=0&h=180" alt="Roasted Mixture">
+                <h3>Dryfruits laddu</h3>
+                <h3>(No sugar/jaggery)</h3>
+                <h4>ditch the guilt </h4>
+                <p>Nutritious, sweet, energy-packed dry fruit laddu treats.</p>
+                <h4>200gm/₹350</h4>
+                <h4>500gm/₹850</h4>
+            </div>
+            <div class="product">
+                <img src="https://theyalsdiy.files.wordpress.com/2019/12/img_20191215_143518.jpg?w=1200" alt="Methi Matri">
+                <h3>Protein laddu</h3>
+                <h4>bite o'might</h4>
+                <p>Powerhouse of immunity boosting goodness</p>
+                <h4>200gm/₹350</h4>
+                <h4>500gm/₹850</h4>
+            </div>
+            <div class="product">
+                <img src="https://i.ytimg.com/vi/1BS-JZrpgns/maxresdefault.jpg" alt="Namk Pare">
+                <h3>Flaxseed laddu</h3>
+                <h4>flaxi delight</h4>
+                <p>Rich in fibre nutrition packed and great for digestion.</p>
+                <h4>200gm/₹330</h4>
+                <h4>500gm/₹700</h4>
+            </div>
+        </div>
+                <h1>You become what you eat...."nuts"</h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://i0.wp.com/vegehomecooking.com/wp-content/uploads/2019/10/SpicyRoastedCashewsFeaturedImage.jpg?fit=1200%2C1200&ssl=1" alt="Roasted Mixture">
+                <h3>roasted cashew</h3>
+                <h4>red queen-peri peri</h4>
+                <p>Spicy, crunchy, premium  roasted peri peri cashews..</p>
+                <h4>all air fried</h4>
+                <h4>100gm/₹175</h4>
+                <h4>200gm/₹325</h4>
+            </div>
+            <div class="product">
+                <img src="https://www.fearlessdining.com/wp-content/uploads/2019/02/honey-roasted-cashews-feature.jpg" alt="Methi Matri">
+                <h3>roasted cashew </h3>
+                <h4>plain jane-simply salty</h4>
+                <p>Crunchy, classic, roasted cashews, simply salty.</p>
+                <h4>100gm/₹175</h4>
+                <h4>200gm/₹325</h4>
+            </div>
+            <div class="product">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/7/OQ/ZP/MD/156770796/black-pepper-cashew-nuts-500x500.jpg" alt="Namk Pare">
+                <h3>roasted cashew </h3>
+                <h4> pepper bomb-black pepper</h4>
+                <p>Crispy, savory, and an irresistible cashew pepper treat .</p>
+                <h4>100gm/₹175</h4>
+                <h4>200gm/₹325</h4>
+            </div>
+ 
+        <div class="product-list">
+            <div class="product">
+               <img src="https://www.smalltownwoman.com/wp-content/uploads/2017/02/Smoky-Spicy-Roasted-Almonds-3-II.jpg" alt="Roasted Mixture">
+                <h3>Roasted almond </h3>
+                <h4>like a diamond</h4>
+                <h4>spice girls</h4>
+                <h4>caution!! they are hot</h4>
+                <p>Crunchy, flavorful, premium  roasted almonds, "!!Masaledar!!".</p>
+                <h4>100gm/₹150</h4>
+                <h4>200gm/₹275</h4>
+            </div>
+            <div class="product">
+                <img src="https://dontsweattherecipe.com/wp-content/uploads/2017/10/butter-roasted-almonds-03.jpg" alt="Methi Matri">
+                <h3>Roasted almond</h3>
+                <h4>like a diamond</h4>
+                <h4> salty taditional</h4>
+                <p>Crunchy, flavorful, premium  roasted almonds, "!!salted !!".</p>
+                <h4>100gm/₹175</h4>
+                <h4>200gm/₹325</h4>
+            </div>
+            <div class="product">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/CI/VA/QQ/6560502/flavoured-almonds-masala-almond-1000x1000.jpg" alt="Namk Pare">
+                <h3>Roasted almond</h3>
+                <h4>like a diamond</h4>
+                <h4> tangy-"!!chatkedar!!"</h4>
+                <p>>Crunchy, flavorful, premium  roasted almonds, "!!chatekedar!!"..</p>
+                <h4>100gm/₹175</h4>
+                <h4>200gm/₹325</h4>
+            </div>
+            <div class="product">
+                <img src="http://thumbs.dreamstime.com/z/roasted-salted-groundnuts-closeup-18775181.jpg" alt="Namk Pare">
+                <h3>GROUNDNUTS</h3>
+                <h4>simple dimple</h4>
+                <p>Crispy, savory, and an irresistible treat of groundnuts.</p>
+                <h4>100gm/₹60</h4>
+                <h4>250gm/₹135</h4>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>Why Meenakshi's Munchies?</h2>
+        <p>MEENAKSHI'S MUNCHIES – TRADITION IN EVERY BITE! Introducing
+Meenakshi's Munchies, a passion-driven Indian food start-up founded
+by Neeta Susmita Sinha, a hardworking mother entrepreneur with a vision to bring
+healthy, affordable, and traditional flavors to every home. With a deep love for
+India’s rich culinary heritage, she is on a mission to revive lost recipes and make
+authentic, homemade delights accessible to all.
+Inspired by the concept of 'Annapurna', the goddess of nourishment, Meenakshi's
+Munchies is dedicated to offering food that not only delights the taste buds but also
+nourishes the soul. Each recipe is a tribute to the warmth and wisdom of Indian
+kitchens, where tradition meets wellness.
+Currently serving Bengaluru, we offer a range of healthy and happy snacking
+options:
+🍪 Thekua (Bihari Cookies) – A crunchy, wholesome snack perfect for mid-daycravings. 🌿 Ayurvedic Gond Gud Laddoo – A powerhouse of immunity-boosting goodness. 🌾 Flax Seed Laddoo – Rich in fiber, nutrition-packed, and great for digestion. 🥟 Gujiya/Pedakiya & Nimki – Classic festive treats, bringing joy in every bite. Each product is homemade, handmade, and freshly prepared, ensuring authenticflavors with a shelf life of over three weeks. +91 8451930200 . Place an order and experience the taste of tradition! ✨ Bringing back traditional flavors, one munch at a time! ✨</p>
+        <p>Meenakshi's Munchies isn't just about snacks—it's about reviving the true essence of Indian culinary heritage. Our snacks are handcrafted with love, using only the finest ingredients, ensuring every bite feels like an indulgence...</p>
+        <ul>
+            <li><strong>Premium Ingredients:</strong> We source the best ingredients for the finest flavor.</li>
+            <li><strong>Handcrafted with Love:</strong> Every product is made with care, ensuring the highest quality.</li>
+            <li><strong>Tradition Meets Luxury:</strong> We blend time-tested recipes with a modern touch.</li>
+        </ul>
+        <p class="motto"><em>✨ Taste the luxury of tradition in every bite. ✨</em></p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries or custom orders, please reach out to us. We would love to hear from you!</p>
+        <h1>Contact us on phone number +91 8451930200  </h1>
+        <h1>download our catalog</h1><a href="https://drive.google.com/file/d/1pXev8MBp5SOs2j-0V5Gu25wOT_e_W5d-/view?usp=drive_link"> <h>Download here</h></a>>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Meenakshi's Munchies. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
